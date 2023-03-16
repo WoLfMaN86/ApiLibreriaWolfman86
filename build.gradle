@@ -1,7 +1,8 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.7.10-SNAPSHOT'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java-library'
+	id 'eclipse'
+	
 }
 
 group = 'es.mde.acing'
@@ -12,9 +13,12 @@ repositories {
 	mavenCentral()
 	maven { url 'https://repo.spring.io/milestone' }
 	maven { url 'https://repo.spring.io/snapshot' }
+	maven { url 'https://jitpack.io' }
+	
 }
 
 dependencies {
+	implementation 'com.github.Wolfman86:ApiLibreriaWolfman86:e738370'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
